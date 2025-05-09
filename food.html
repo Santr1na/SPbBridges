@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>Spb Bridges</title>
+        <link rel="stylesheet" href="/css/food.css">
+    </head>
+    <body>
+        <header>
+            <div class="FLAGS">
+                <img src="/icons/RU.svg" width="30" height="20">
+                <img src="/icons/GB.svg" width="30" height="20">
+            </div>
+            <div style="display: flex; gap: 50px; margin-right: 30px;">
+                <div class="CENTER">
+                    <div class="Logo-center">
+                        <a class="LOGO" href="/index.html"> 
+                            <img src="/icons/LOGO.svg" width="144" height="40">
+                        </a>
+                    </div>
+
+                    <div class="SQUARE">
+                    </div>
+                </div>
+                <div class="ABC">
+                    <a href="/places.html">
+                        <img src="/icons/PLACEC.svg" width="56" height="44" id="icon">
+                    </a>
+                    <a href="/food.html">
+                        <img src="/icons/FOOD.svg" width="56" height="44" id="icon" >
+                    </a>
+                    <a href="/culture.html">
+                        <img src="/icons/CULTURE.svg" width="56" height="44" id="icon">
+                    </a>
+                    <a href="/map.html">
+                        <img src="/icons/MAP.svg" width="56" height="44" id="icon">
+                    </a>
+                    <a href="/contacts.html">
+                        <img src="/icons/CONTACTS.svg" width="56" height="44">
+                    </a>
+                </div> 
+            </div>
+        </header>
+        <main>
+
+            <section class="hero">
+                <img class="MainImage" src="/img/FoodMain.svg">
+                <div class="hero-content">
+                  <h1>ЕДА В СПБ:ГДЕ ВКУСНО<br>ПОЕСТЬ И ЧТО ПОПРОБОВАТЬ</h1>
+                  <h2>ПОПРОБУЙТЕ ВКУС ПЕТЕРБУРГА: ОТ<br>КЛАССИКА ДО АВТОРСКОЙ КУХНИ</h2>
+                  
+                  <div class="GLOW-2"></div>
+                  <div class="Blur"></div>
+                  <div class="SHADOW-BACKGROUND"></div>
+                </div>
+            </section>
+
+            <h1 class="Labelh1">ЕДА САНКТ-ПЕТЕРБУРГА</h1>
+            <div class="Fullcard">
+                <div class="LeftMenu">
+                    <p>ТИП ЗАВЕДЕНИЯ</p>
+                    <div class="LeftLabel">
+                        <input class="LeftLabel" type="checkbox" name="type" value="russian">
+                        <h2>Ресторан русской кухни</h2> 
+                    </div>
+                    <div class="LeftLabel">
+                        <input type="checkbox" name="type" value="cafe">
+                        <h2>Кафе и кондитерские</h2> 
+                    </div>
+                    <div class="LeftLabel">
+                        <input type="checkbox" name="type" value="author">
+                        <h2>Авторская кухня и гастрономия</h2> 
+                    </div>
+                    <div class="LeftLabel">
+                        <input type="checkbox" name="type" value="market">
+                        <h2>Фуд-маркеты и стрит-фуд</h2> 
+                    </div>
+                    <p>РАСПОЛОЖЕНИЕ</p>
+                    <form>
+                        <label for="district-select"></label>
+                        <div class="Box">
+                        <select name="district" id="district-select">
+                                <option value="" class="option" >ВЫБЕРИТЕ РАЙОН</option>
+                                <option value="admiral">Адмиралтейский</option>
+                                <option value="vasileo">Василеостровский</option>
+                                <option value="viborg">Выборгский</option>
+                                <option value="kalinin">Калининский</option>
+                                <option value="kirovsk">Кировский</option>
+                                <option value="kolp">Колпинский</option>
+                                <option value="krasnogv">Красногвардейский</option>
+                                <option value="krasnosel">Красносельский</option>
+                                <option value="kronshtad">Кронштадский</option>
+                                <option value="kurort">Курортный</option>
+                                <option value="mosk">Московский</option>
+                                <option value="nevsk">Невский</option>
+                                <option value="petrgr">Петроградский</option>
+                                <option value="petrodvor">Петродворцовый</option>
+                                <option value="prim">Приморский</option>
+                                <option value="pushk">Пушкинский</option>
+                                <option value="frunz">Фрунзенский</option>
+                                <option value="centr">Центральный</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div>
+                <div href="#" class="Restaraunt" data-type="russian" data-district="centr">
+                    <img src="/img/restSadko.svg">
+                    <div class="RestName">
+                        <h3>САДКО</h3>
+                        <hr class="hr">
+                        <h4 class="Text1" >Классическая русская<br>кухня в атмосфере<br>народных сказок</h4>
+                        <h5>Адрес</h5>
+                        <h4>Дворцовая площадь, 2</h4>
+                        <h5>Время работы</h5>
+                        <h4>12:00-23:00</h4>
+                    </div>
+                </div>
+                <div class="Restaraunt" data-type="author" data-district="admiral">
+                    <img src="/img/gogolrest.svg">
+                    <div class="RestName">
+                        <h3>ГОГОЛЬ</h3>
+                        <hr class="hr">
+                        <h4 class="Text1">Ресторан в духе XIX<br>века с авторским<br>меню</h4>
+                        <h5>Адрес</h5>
+                        <h4>Малая морская ул., 8</h4>
+                        <h5>Время работы</h5>
+                        <h4>12:00-23:00</h4>
+                    </div>
+                </div>
+                <div class="Restaraunt" data-type="market" data-district="centr">
+                    <img src="/img/EatMar.svg">
+                    <div class="RestName">
+                        <h3>Eat Market</h3>
+                        <hr class="hr">
+                        <h4 class="Text1">Большой асортимент<br>самых разных вкусов</h4>
+                        <h5>Адрес</h5>
+                        <h4>Лиговский пр., 30А</h4>
+                        <h5>Время работы</h5>
+                        <h4>10:00-23:00</h4>
+                    </div>
+                </div>
+                <div class="Restaraunt" data-type="cafe" data-district="nevsk">
+                    <img src="/img/zoom 1.svg">
+                    <div class="RestName">
+                        <h3>Зум кафе</h3>
+                        <hr class="hr">
+                        <h4 class="Text1">Попробуйте<br>европейскую<br>кухню всей семьей</h4>
+                        <h5>Адрес</h5>
+                        <h4>Гороховая ул., 22</h4>
+                        <h5>Время работы</h5>
+                        <h4>9:00-00:00</h4>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+            
+
+ 
+            
+        </main>
+
+        <footer>
+            <div class="FOOT-LOGO">
+                <img src="/icons/LOGO.svg" width="144" height="40">
+            </div>
+            <div>
+                <a href="/contacts.html">
+                    <p id="icon-footer" class="FOOT-ICON">контакты</p>
+                </a>
+                <a href="/map.html">
+                    <p id="icon-footer" class="FOOT-ICON">карта</p>
+                </a>
+                <a href="/culture.html">
+                    <p id="icon-footer" class="FOOT-ICON">культура</p>
+                </a>
+                <a href="/food.html">
+                    <p id="icon-footer" class="FOOT-ICON">еда</p>
+                </a>
+                <a href="/places.html">
+                    <p id="icon-footer" class="FOOT-ICON">места</p>
+                </a>
+                <a href="/css/main.css">
+                    <p id="icon-footer" class="FOOT-ICON">условия пользования</p>
+                </a>
+                <a href="/css/main.css">
+                    <p id="icon-footer" class="FOOT-ICON">реклама</p>
+                </a>
+            </div>
+        </footer>
+    <script src="/js/food.js"> </script>
+    </body>
+</html>

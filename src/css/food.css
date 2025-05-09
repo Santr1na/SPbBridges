@@ -1,0 +1,512 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+HTML
+{
+    overflow-x: hidden;
+}
+header /* шапка */
+{
+    z-index: 4;
+    position: relative;
+    background: #101216;
+    height: 88px;
+    display: flex;
+    justify-content: space-between; /* Исправлено: теперь элементы разнесены равномерно */
+
+}
+.FLAGS /* языки */
+{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    padding: 0px 30px 0px 30px;
+
+}
+.FLAGS img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.Logo-center{
+  position: absolute;
+width: 100%;
+height: 100%;
+justify-content: center;
+margin: 0 auto;
+display: flex;
+align-items: center;
+}
+.LOGO /* логотип */
+{
+    position: relative;
+    display: flex;
+    width: 144px;
+    height: 40px;
+    z-index: 2;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+ 
+}
+.LOGO:hover { /* при наведении*/
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.CENTER /* центровка логотипа */
+{
+    position: relative;
+    z-index: 2;
+}
+.SQUARE /* оранжевый куб у лого*/
+{
+    top: 0;
+    position: relative;
+    height: 88px;
+    width: 168px;
+    background-color: #62442B;
+    z-index: -1;
+}
+.ABC /* иконки в шапке */
+{
+    right: 40px;                /* Привязка к правому краю с учётом padding header */
+    display: flex;              /* Расположение иконок в ряд */
+    gap: 10px;                  /* Расстояние между иконками */
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: flex-end; /* Держим их справа */
+    
+}
+.ABC img {
+    width: clamp(40px,4vw, 56px);  /* Динамический размер относительно ширины экрана */
+    height: auto; /* Сохранение пропорций */
+    max-width: 56px; /* Максимальный размер */
+    min-width: 40px; /* Минимальный размер */
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.ABC img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+#icon /* иконки айдишники */
+{
+    margin-right: 116px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #101216;
+    color: #fff;
+  }
+  
+  .hero {
+    padding: 0px;
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+  }
+
+  .hero h2
+  {
+    position: relative;
+    font-size: 46px;
+    z-index: 1;
+  }
+  
+  
+  .hero-content {
+    position: absolute;
+    top: 100px;
+    left: 124px;
+    border-radius: 15px;
+    
+  }
+  .hero-content h1{
+    color: #ffff;
+    font-size: 46px;
+    font-family: "Montserrat";
+    text-shadow: 0 0 46px #fff;
+    font-weight: 800;
+    padding-bottom: 232px;
+
+  }
+  .Blur {
+    position: absolute;
+    top: 240px;
+    left: -50px;
+    width: 1080px;
+    height: 324px;
+    z-index: 0;
+    backdrop-filter: blur(25px);
+    background-size: cover;
+    border-radius: 25px;
+    background-image: linear-gradient(200deg,rgba(0,157,255,0.17)-50%,rgba(255,255,255,0.10));
+    
+  }
+  .SHADOW-BACKGROUND /* затемнение 1 блока*/
+    {
+    position: absolute;
+    width: 1920px;
+    height: 112px;
+    top: 700px;
+    left: -130px;
+    box-shadow: #0000;
+    background: linear-gradient(#00000000,black);
+    z-index:  11;
+}
+.MainImage{
+  z-index: -10;
+}
+.GLOW-2
+{
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: -1;
+    top: 200px;
+    left: 87%;
+    height: 300px;
+    width: 1200px;
+    border-radius: 100%;
+    background: rgb(118, 230, 255);
+    box-shadow: 10px 10px 300px 250px rgba(118, 230, 255, 0.6);
+    margin-left: 0;
+    margin-right: 0;
+}
+.Fullcard
+{
+    display: flex;
+}
+  .hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+  }
+  .Labelh1
+  {
+    margin-top: 212px;
+    text-align: center;
+    margin-bottom: 86px;
+    font-size: 46;
+    font-weight: 500;
+    text-shadow: 0 0 46px #fff;
+  }
+  .LeftMenu
+  {
+    background-color: #1A1D22;
+    width: 410px;
+    margin-left: 236px;
+    padding-left: 30px;
+    padding-top: 18px;
+    font-family: "Montserrat";
+    height: max-content;
+    padding-bottom: 34px;
+  }
+  .LeftMenu p
+  {
+    margin-top: 16px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .LeftLabel
+  {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .LeftLabel h2
+  {
+    font-size: 20px;
+    font-weight: 500;
+    position: relative;
+    padding-left: 34px;
+    cursor: pointer;
+
+  }
+  
+  .LeftLabel input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 18px; /* Такая же ширина как у кастомного */
+    height: 18px; /* Такая же высота */
+    cursor: pointer;
+    z-index: 1; /* Чекбокс поверх кастомного (для клика) */
+  }
+  
+  /* Кастомный чекбокс (заменяет нативный) */
+  .LeftLabel {
+    position: relative; /* Для абсолютного позиционирования */
+    padding-left: 0px; /* Отступ для чекбокса */
+    cursor: pointer;
+  }
+  
+  .LeftLabel h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid white;
+    background-color: transparent;
+  }
+  
+  /* Галочка */
+  .LeftLabel h2::after {
+    content: "✓";
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+  
+  /* Показываем галочку при выборе */
+  .LeftLabel input[type="checkbox"]:checked ~ h2::after {
+    opacity: 1;
+  }
+  
+  /* Подсветка при наведении */
+  .LeftLabel:hover h2::before {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .option 
+  {
+    font-size: 12px;
+    font-weight: 500;
+  }
+ 
+  .option::before
+  {
+    content: url(/src/icons/SubwayIcon.svg);
+  }
+  form
+  {
+    border: 1px solid #ffff;
+    width: 326px;
+    height: 52px;
+    align-content: center;
+   
+  }
+  select
+  {
+    background: #0000;
+    border: none;
+    color: #828282;
+    width: 100%;
+    padding-left: 12px;
+    -webkit-appearance: none; 
+    appearance: none;
+  }
+  
+  .Box::after
+  {
+    position: absolute;
+    background-image: url(/src/icons/arrowdown.svg);
+    width: 100px;
+    top: calc(50% - 4px);
+    right: 15px;
+    width: 14px;
+    height: 8px;
+    background-size: 100%;
+    content: '';
+    background-repeat: no-repeat;
+  }
+  .Box 
+  {
+    position: relative;
+    
+  }
+  .Restaraunt
+  {
+    display: flex;
+    padding-bottom: 40px;
+    cursor: pointer;
+  }
+  .Restaraunt img
+  {
+    margin-left: 70px;
+  }
+  .RestName
+  {
+    background-color: #1A1D22;
+    font-family: "Montserrat";
+    width: 324px;
+  }
+  .RestName h3
+  {
+    padding-top: 35px;
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .RestName h4
+  {
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+  .Text1
+  {
+    margin-top: 24px;
+    padding-left: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 14px;
+  }
+  .RestName h5
+  {
+    padding-left: 40px;
+    font-size: 16px;
+    color: #fcd34d;
+    margin-bottom: 4px;
+  }
+  .hr
+  {
+    width: 240px;
+    margin: 0 auto;
+    
+  }
+
+
+
+
+footer /* подвал */
+{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background: #202329;
+    align-items: center;
+    height: 90px;
+    padding: 0 0 0 36px;
+}
+.FOOT-LOGO /* логотип */
+{
+    display: flex;
+    align-content: center;
+}
+.FOOT-ICON /* подписи в подвале */
+{
+    float: right;
+    margin: 35px 0px 35px 0px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-right: 20px;
+    letter-spacing: -1px;
+}
+#icon-footer /* айдишники */
+{
+    margin-right: 55px;
+    color: #7C7C7C;
+}
+
+@media (max-width: 1440px) {
+  .hero-content {
+    left: 60px;
+  }
+  .LeftMenu {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header,
+  .FLAGS,
+  .ABC {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hero-content {
+    left: 40px;
+  }
+
+  .LeftMenu {
+    margin-left: 40px;
+    width: 80%;
+  }
+
+  .Restaraunt {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Restaraunt img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .RestName {
+    width: 90%;
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 0;
+  }
+
+  .LOGO,
+  .CENTER,
+  .SQUARE {
+    position: static;
+    transform: none;
+    margin: 0 auto;
+  }
+
+  .FLAGS,
+  .ABC {
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+  }
+
+  .hero-content {
+    top: 60px;
+    left: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    padding-bottom: 120px;
+  }
+
+  .Labelh1 {
+    font-size: 32px;
+  }
+
+  .LeftMenu {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .RestName h3,
+  .RestName h4,
+  .Text1,
+  .RestName h5 {
+    font-size: 18px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .FOOT-ICON {
+    text-align: center;
+    margin: 20px 0;
+  }
+}

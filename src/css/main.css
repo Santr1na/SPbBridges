@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+HTML
+{
+    overflow-x: hidden;
+}
+header /* шапка */
+{
+    width: 100%;
+    z-index: 3;
+    position: relative;
+    background: #101216;
+    height: 88px;
+    display: flex;
+    justify-content: space-between; /* Исправлено: теперь элементы разнесены равномерно */
+
+}
+.FLAGS /* языки */
+{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    padding: 0px 30px 0px 30px;
+
+}
+.FLAGS img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.Logo-center{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.LOGO /* логотип */
+{
+    position: relative;
+    display: flex;
+    width: 144px;
+    height: 40px;
+    z-index: 2;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+ 
+}
+.LOGO:hover { /* при наведении*/
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.CENTER /* центровка логотипа */
+{
+    position: relative;
+    z-index: 2;
+}
+.SQUARE /* оранжевый куб у лого*/
+{
+    top: 0;
+    position: relative;
+    height: 88px;
+    width: 168px;
+    background-color: #62442B;
+    z-index: -1;
+}
+.ABC /* иконки в шапке */
+{
+    right: 40px;                /* Привязка к правому краю с учётом padding header */
+    display: flex;              /* Расположение иконок в ряд */
+    gap: 10px;                  /* Расстояние между иконками */
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: flex-end; /* Держим их справа */
+    
+}
+.ABC img {
+    width: clamp(40px,4vw, 56px);  /* Динамический размер относительно ширины экрана */
+    height: auto; /* Сохранение пропорций */
+    max-width: 56px; /* Максимальный размер */
+    min-width: 40px; /* Минимальный размер */
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.ABC img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+#icon /* иконки айдишники */
+{
+    margin-right: 116px;
+}
+
+.MAIN 
+{
+    z-index: 0;
+    background-color: #101216;
+    position: relative;
+}
+.BACKGROUND /* фото мостов */
+{
+    z-index: 10;
+    height: auto;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+.PETR-BACKGROUND
+{
+    position: absolute;
+    left: 104px;
+    margin-top: 125px;
+    z-index: 1;
+}
+.LAHTA-BACKGROUND
+{
+    position: absolute;
+    left: 672px;
+    margin-top: 205px;
+    z-index: 2;
+}
+.PETR-BACKGROUND-BLUR
+{
+    position: absolute;
+    width: 1105px;
+    height: 686px;
+    left: 104px;
+    margin-top: 125px;
+    z-index: 0;
+    backdrop-filter: blur(25px);
+    background-size: cover;
+}
+.LAHTA-BACKGROUND-BLUR
+{
+    position: absolute;
+    width: 1132px;
+    height: 415px;
+    left: 672px;
+    margin-top: 328px;
+    z-index: 1;
+    backdrop-filter: blur(25px);
+}
+.TEXT1-BACKGROUND
+{
+    position: absolute;
+    left: 192px;
+    margin-top: 180px;
+    z-index: 10;
+    color: #ffff;
+    font-size: 46px;
+    font-family: "Montserrat";
+    text-shadow: 0 0 46px #fff;
+    font-weight: 800;
+}
+.TEXT2-BACKGROUND
+{
+    position: absolute;
+    left: 734px;
+    margin-top: 390px;
+    z-index: 10;
+    color: #ffff;
+    font-size: 40px;
+    font-family: "Montserrat";
+    text-shadow: 0 0 46px #fff;
+    
+}
+.SHADOW-BACKGROUND /* затемнение 1 блока*/
+{
+    position: absolute;
+    width: 1920px;
+    height: 112px;
+    margin-top: 700px;
+    box-shadow: #0000;
+    background: linear-gradient(#00000000,black);
+    z-index:  11;
+}
+.GLOW-2
+{
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: -1;
+    top: 200px;
+    left: 50%;
+    height: 300px;
+    width: 1200px;
+    border-radius: 100%;
+    background: rgb(118, 230, 255);
+    box-shadow: 10px 10px 300px 250px rgba(118, 230, 255, 0.6);
+    margin-left: auto;
+    margin-right: auto;
+}
+.explore-city /* стрелка исследовать город*/ 
+{  
+    position: absolute;
+    left: 50%;
+    margin-top: 5px; 
+    padding-top: 0px;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.explore-city img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.explore-city:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.explore-city:hover img {
+    transform: translateY(5px);
+}
+
+
+
+.CARDS-CONTAINER  /* 2 блок 3 карточки*/
+{    
+    margin-top: 175px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 112px;
+}
+
+.CARD /* карточка */
+{
+    width: 410px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 56px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+.ZAGOLOVOK-BLOCK2 
+{
+    font-family: "Montserrat";
+    font-weight: 900;
+    font-size: 33px;
+    margin-bottom: 73px;
+    z-index: 2;
+}
+
+.ZAGOLOVOK2-BLOCK2 {
+    font-family: "Montserrat";
+    font-weight: 500;
+    color: #949494;
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-bottom: 47px;
+    z-index: 2;
+}
+
+.btn {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 13px;
+    width: 148px;
+    display: inline-block;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 34px;
+    text-decoration: none;
+    z-index: 2;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.btn:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+
+.SHADOW-CARD 
+{
+    position: absolute;
+    bottom: 0;
+    width: 410px;
+    height: 580px;
+    background: linear-gradient(0deg, #000 0%, #0000 100%);
+}
+
+
+.CARDS-CITY {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: #101216;
+    
+}
+
+.CARD2-CONTAINER {
+    display: flex;
+    gap: 70px;
+    max-width: 1200px;
+}
+.CARD2 {
+    display: block;
+    position: relative;
+    width: 380px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #1a1d23;
+    margin-bottom: 112px;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.CARD2:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.CARD2 img {
+    width: 100%;
+    height: auto;
+}
+.CARD2-CONTENT {
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #0e3a55 0%, #0000 100%);
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    backdrop-filter: blur(25px);
+}
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: "Montserrat";
+    padding-left: 28px;
+    padding-top: 14px;
+}
+.card-text {
+    font-size: 11px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    padding-left: 28px;
+    margin-bottom: 20px;
+    padding-right: 22px;
+}
+
+
+
+
+
+footer /* подвал */
+{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    background: #202329;
+    align-items: center;
+    height: 90px;
+    padding: 0 0 0 36px;
+}
+.FOOT-LOGO /* логотип */
+{
+    display: flex;
+    align-content: center;
+}
+.FOOT-ICON /* подписи в подвале */
+{
+    float: right;
+    margin: 35px 0px 35px 0px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-right: 20px;
+    letter-spacing: -1px;
+}
+#icon-footer /* айдишники */
+{
+    margin-right: 55px;
+    color: #7C7C7C;
+}
+@media (max-width: 957px) {
+    .FOOT-ICON {
+        font-size: 12px;
+    }
+}
+@media (max-width: 765px) {
+    .FOOT-ICON {
+        font-size: 8px;
+        margin: 2px;
+    }
+}
+

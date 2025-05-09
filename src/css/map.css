@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* { 
+    margin: 0; 
+    padding: 0; 
+}
+HTML
+{
+    overflow-x: hidden;
+}
+header /* шапка */
+{
+    z-index: 3;
+    position: relative;
+    background: #101216;
+    height: 88px;
+    display: flex;
+    justify-content: space-between; /* Исправлено: теперь элементы разнесены равномерно */
+
+}
+.FLAGS /* языки */
+{
+    align-items: center;
+    display: flex;
+    gap: 40px;
+    padding: 0px 30px 0px 30px;
+
+}
+.FLAGS img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.Logo-center{
+    position: absolute;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  }
+.LOGO /* логотип */
+{
+    position: relative;
+    display: flex;
+    width: 144px;
+    height: 40px;
+    z-index: 2;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+ 
+}
+.LOGO:hover { /* при наведении*/
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+.CENTER /* центровка логотипа */
+{
+    position: relative;
+    z-index: 2;
+}
+.SQUARE /* оранжевый куб у лого*/
+{
+    top: 0;
+    position: relative;
+    height: 88px;
+    width: 168px;
+    background-color: #62442B;
+    z-index: -1;
+}
+.ABC /* иконки в шапке */
+{
+    right: 40px;                /* Привязка к правому краю с учётом padding header */
+    display: flex;              /* Расположение иконок в ряд */
+    gap: 10px;                  /* Расстояние между иконками */
+    transition: transform 0.3s;
+    align-items: center;
+    justify-content: flex-end; /* Держим их справа */
+    
+}
+.ABC img {
+    width: clamp(40px,4vw, 56px);  /* Динамический размер относительно ширины экрана */
+    height: auto; /* Сохранение пропорций */
+    max-width: 56px; /* Максимальный размер */
+    min-width: 40px; /* Минимальный размер */
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.ABC img:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+#icon /* иконки айдишники */
+{
+    margin-right: 116px;
+}
+
+body
+{
+    color: #101216;
+}
+.BACKGROUND /* фото мостов */
+{
+    position: absolute;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    background-image: url(/src/img/BACKGROUNDSVG.svg);
+    height: 900px;
+    background-repeat: no-repeat;
+}
+.FULL-TEXT 
+{
+    padding-top: 100px;
+    padding-left: 124px;
+    color: #fff;
+    position: relative;
+}
+.LABEL1-BACKGROUND
+{
+    color: #ffff;
+    font-size: 46px;
+    font-family: "Montserrat";
+    text-shadow: 0 0 46px #fff;
+    font-weight: 800;
+}
+.LABEL2-BACKGROUND
+{
+    padding-top: 96px;
+    padding-bottom: 72px;
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-weight: 900;
+}
+.SHADOW-BACKGROUND /* затемнение 1 блока*/
+{
+    position: absolute;
+    width: 1920px;
+    height: 112px;
+    margin-top: 790px;
+    box-shadow: #0000;
+    background: linear-gradient(#00000000,black);
+    z-index:  11;
+}
+.contact
+{
+    font-family: "Montserrat";
+    padding-bottom: 40px;
+}
+.contact a
+{
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.contact a:hover
+{
+    color: rgb(39, 39, 82);
+}
+.contact p
+{
+    color: #ffff;
+    font-size: 16px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+.MAP
+{
+    position: relative;
+    margin-left: 174px;
+    margin-top: 154px;
+}
+.MAP a
+{
+    position: absolute;
+    top: 40%;
+    left: 38%;
+    align-items: center;
+
+}
+.btn {
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 21px;
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+    background: #027A9E;
+    color: white;
+    position: relative;
+    text-align: center;
+    align-content: center;
+    border-radius: 34px;
+    text-decoration: none;
+    z-index: 2;
+    transition: width 0.3s, transform 0.3s; /* Плавное уменьшение и анимация */
+}
+.btn:hover {
+    transform: scale(1.1); /* Добавлено: эффект увеличения при наведении */
+}
+
+
+
+
+
+
+
+footer /* подвал */
+{
+    position: relative;
+    display: flex;
+    z-index: 10;
+    justify-content: space-between;
+    background: #202329;
+    align-items: center;
+    height: 90px;
+    padding: 0 0 0 36px;
+}
+.FOOT-LOGO /* логотип */
+{
+    display: flex;
+    align-content: center;
+}
+.FOOT-ICON /* подписи в подвале */
+{
+    float: right;
+    margin: 35px 0px 35px 0px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    margin-right: 20px;
+    letter-spacing: -1px;
+}
+#icon-footer /* айдишники */
+{
+    margin-right: 55px;
+    color: #7C7C7C;
+}
+@media (max-width: 957px) {
+    .FOOT-ICON {
+        font-size: 12px;
+    }
+}
+@media (max-width: 765px) {
+    .FOOT-ICON {
+        font-size: 8px;
+        margin: 2px;
+    }
+}
